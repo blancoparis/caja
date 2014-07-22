@@ -1,0 +1,4 @@
+caja
+====
+
+Inventario caja.
