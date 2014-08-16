@@ -6,5 +6,16 @@
 				<div class="row placeholders"></div>
 
 				<h2 class="sub-header"><spring:message code="inicio.subcabecera"/></h2>
-				<div class="table-responsive"><spring:message code="inicio.descripcion" /></div>
+				<div class="table-responsive">
+					<span class="label label-default"><spring:message code="inicio.saldo" />{{inicioFicha.saldo}}</span>
+					<span class="label label-default"><spring:message code="inicio.ingresos" />{{inicioFicha.ingresos}}</span>
+					<span class="label label-default"><spring:message code="inicio.gastos" />{{inicioFicha.gastos}}</span>
+				</div>
+				
+				<h2 class="sub-header"><spring:message code="inicio.subcabecera.saldomensual"/></h2>
+				<div class="table-responsive">
+					<span class="label label-default"><spring:message code="inicio.saldo" />{{saldoMensual.saldo}}</span>
+					<span class="label label-default"><spring:message code="inicio.ingresos" />{{saldoMensual.ingresos}}</span>
+					<span class="label label-default"><spring:message code="inicio.gastos" />{{saldoMensual.gastos}}</span>
+				</div>
 			</div>
