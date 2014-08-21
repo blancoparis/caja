@@ -3,7 +3,14 @@
 	 * Configuraciones generales del proyecto
 	 */
 	appCabeceraControlador.constant("configuracionGeneral", {
-		ctx : 'http://localhost:8080/parte3/'
+		ctx : 'http://localhost:8080/caja/'
+	    ,confFecha:{
+	    	formato:'dd/MM/yyyy'
+	    	,dateOptions : {
+				    formatYear: 'yy',
+				    startingDay: 1
+		    }
+	    }
 	});
 	/**
 	 * El controlador encargado de cargar los datos de la cabecera
@@ -11,7 +18,7 @@
 	appCabeceraControlador.controller('cabeceraCtrl', [ '$scope', '$http',
 			'configuracionPagina',
 			function($scope, $http, configuracionPagina) {
-				console.log('Inicialización la cabecera');
+				console.log('Inicializaciï¿½n la cabecera');
 				$scope.cabecera = {
 					titulo : configuracionPagina.titulo
 				};
@@ -22,7 +29,7 @@
 	appCabeceraControlador.controller('menuCtrl', [ '$scope', '$http',
 			'configuracionPagina', 'configuracionGeneral',
 			function($scope, $http, configuracionPagina, conf) {
-				console.log('Inicialización la menu');
+				console.log('Inicializaciï¿½n la menu');
 				$scope.menu = {
 					opciones : [ {
 						id : 1,
@@ -38,6 +45,11 @@
 						id : 3,
 						opcion : 'listado',
 						url : conf.ctx + 'listado',
+						activo : false
+					} , {
+						id : 4,
+						opcion : 'gasto',
+						url : conf.ctx + 'gasto',
 						activo : false
 					} 
 					]
