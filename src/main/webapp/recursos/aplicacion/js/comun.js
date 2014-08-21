@@ -51,6 +51,11 @@
 						opcion : 'gasto',
 						url : conf.ctx + 'gasto',
 						activo : false
+					} , {
+						id : 5,
+						opcion : 'articulo',
+						url : conf.ctx + 'directorio/articulo',
+						activo : false
 					} 
 					]
 				};
